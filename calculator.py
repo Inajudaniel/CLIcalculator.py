@@ -19,16 +19,16 @@ def calculator():
             print("Invalid option, Please choose a number from 1 to 5.")
             continue
 
-    try:
-        num1 = float(input("Enter the First Number: "))
-        num2 = float(input("Enter the Second Number: "))
-    except ValueError:
-        print("invalid Input, please enter numbers only")
-        continue
+        try:
+            num1 = float(input("Enter the First Number: "))
+            num2 = float(input("Enter the Second Number: "))
+        except ValueError:
+            print("invalid Input, please enter numbers only")
+            continue
     
-    if choice == "1":
-        result = num1 + num2
-        print(f"Result: {num1} + {num2} = {result}")
+        if choice == "1":
+            result = num1 + num2
+            print(f"Result: {num1} + {num2} = {result}")
     
         if choice == "2":
             result = num1 - num2
@@ -39,10 +39,11 @@ def calculator():
             print(f"Result: {num1} * {num2} = {result}")
 
         if choice == "4":
-            result = num1 / num2
+            
             if num2 == 0:
                 print("invalid input, cannot be divided by zero")
             else: 
+                result = num1 / num2
                 print(f"Result: {num1} / {num2} = {result}")
 
 
